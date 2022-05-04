@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // VARIABLES
     //===
     const DATE_TARGET = new Date('05/10/2022 0:00 AM');
-    const DATE_INIT_TARGET = new Date('05/04/2022 0:00 AM');
+    const DATE_INIT_TARGET = new Date('05/04/2022 00:00 AM');
     // DOM for render
     const SPAN_DAYS = document.querySelector('span#days');
     const SPAN_HOURS = document.querySelector('span#hours');
@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function mostrarImgs(){
-        let img = imgs/12 
+        let img = Math.floor(imgs/6) 
         if(img >=24){
+           
             musicaC.play();musicaC.loop =true 
             document.getElementById("containerM").style.display="none"
         }else{musicaI.play();musicaI.loop =true};
